@@ -1,12 +1,15 @@
-package com.cass.nutrition.app;
+package com.cass.nutrition.app.Activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.cass.nutrition.app.R;
 
 
 public class MainActivity extends Activity {
@@ -17,7 +20,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.whole_home_screen).setOnClickListener(new View.OnClickListener() {
+        View mView = findViewById(R.id.whole_home_screen);
+        mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TextView tv = (TextView) findViewById(R.id.home_text_view);
@@ -33,6 +37,14 @@ public class MainActivity extends Activity {
             }
         });
 
+        mView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                startActivity(new Intent(MainActivity.this, FoodSelectionActivity.class));
+
+                return true;
+            }
+        });
         Log.d("CASS", "this app rocks!!");
     }
 
