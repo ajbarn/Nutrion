@@ -5,5 +5,6 @@
     <string name="hello_world">Determining if Alex sucks...!</string>
     <string name="action_settings">Settings</string>
     <string name="yes">Yes, Alex does suck</string>
+    <string name="picture">PICTURE</string>
 
 </resources>
