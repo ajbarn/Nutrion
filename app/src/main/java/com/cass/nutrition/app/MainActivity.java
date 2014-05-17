@@ -2,6 +2,7 @@ package com.cass.nutrition.app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,7 +21,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 TextView tv = (TextView) findViewById(R.id.home_text_view);
-
                 if (doesAlexSuck) {
                     tv.setText(R.string.hello_world);
                     doesAlexSuck = false;
@@ -32,6 +32,8 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
+        Log.d("CASS", "this app rocks!!");
     }
 
 
