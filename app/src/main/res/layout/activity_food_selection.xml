@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Search"
-        android:background="@android:color/white"
+        android:background="@android:color/darker_gray"
         />
         </FrameLayout>
 
@@ -23,14 +23,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select your food"
+        android:fontFamily="sans-serif-thin"
         android:gravity="center_horizontal"
-        android:background="@android:color/holo_blue_bright"/>
+        android:background="@android:color/holo_green_light"/>
 
     <ListView
         android:id="@+id/food_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
-        </ListView>
+
+
+
+    </ListView>
 
 </LinearLayout>

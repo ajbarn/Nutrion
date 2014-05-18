@@ -30,6 +30,7 @@ public class FoodSelectionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_food_selection);
         ListView listView = (ListView) findViewById(R.id.food_list_view);
         for(String s : tempFood) {

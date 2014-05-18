@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
         mView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                startActivity(new Intent(MainActivity.this, FoodSelectionActivity.class));
+                startActivity(new Intent(MainActivity.this, MealPlan.class));
 
                 return true;
             }
