@@ -3,10 +3,12 @@ package com.cass.nutrition.app.Activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.cass.nutrition.app.Constants;
 import com.cass.nutrition.app.R;
 
 /**
@@ -31,11 +33,23 @@ public class MealPlan extends Activity{
         int ID = item.getItemId();
         switch(ID){
             case R.id.addMealPlan:
-            startActivity(new Intent(MealPlan.this, FoodSelectionActivity.class));
+            startActivityForResult(new Intent(MealPlan.this, FoodSelectionActivity.class), 90);
                 break;
             default:
             Toast.makeText(getBaseContext(), "Baaaaah says the sheep", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d("ASDF", "you are here");
+        if (resultCode == 90 && data != null) {
+            Bundle bundle = data.getExtras();
+            String foodName = bundle.getString(Constants.FOOD_NAME);
+            Toast.makeText(MealPlan.this, foodName, Toast.LENGTH_SHORT).show();
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

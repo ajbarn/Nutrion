@@ -17,11 +17,11 @@
         </activity>
         <activity
             android:name=".Activities.FoodSelectionActivity"
-            android:label="@string/app_name" >
+            android:label="Foods" >
         </activity>
         <activity
             android:name=".Activities.MealPlan"
-            android:label="@string/app_name" >
+            android:label="Meal Plan" >
         </activity>
     </application>
 
