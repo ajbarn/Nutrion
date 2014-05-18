@@ -70,8 +70,12 @@ public class FoodSelectionActivity extends Activity {
                 TextView mView = (TextView)view.findViewById(R.id.food_name);
                 String text = mView.getText().toString();
                 Log.d("ASDF", "you have clicked " + text);
+                TextView mQiew = (TextView)view.findViewById(R.id.calorie_count);
+                String text2 = mQiew.getText().toString();
+
                 Bundle bundle = new Bundle();
                 bundle.putString(Constants.FOOD_NAME, text);
+                bundle.putString(Constants.CALORIE_AMOUNT, text2);
                 Intent intent = new Intent();
                 intent.putExtras(bundle);
                 setResult(90, intent);
